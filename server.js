@@ -18,7 +18,7 @@ client.on('connect', function() {
 });
 
 // Routes
-app.get('/', function(req, res) {
+app.get('/led', function(req, res) {
     res.render('index');
 });
 
