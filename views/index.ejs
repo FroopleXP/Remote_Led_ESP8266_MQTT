@@ -1,0 +1,38 @@
+<style>
+
+    .red { background-color: rgb(255, 0, 0); }
+    .green { background-color: rgb(0, 255, 0); }
+    .blue { background-color: rgb(0, 0, 255); }
+    td { padding: 20px 30px 20px 30px; }
+
+</style>
+<script type="javascript">
+    $(document).ready(function() {
+        alert("Working...");
+    });
+</script>
+<html>
+    <head>
+        <title>Remote Control LED</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </head>
+    <body>
+        <table border="1">
+            <tr colspan="3">
+                <td class="red">Red</td>
+                <td class="green">Green</td>
+                <td class="blue">Blue</td>
+            </tr>
+            <tr colspan="3">
+                <td><button onclick="red_on()">On</button></td>
+                <td><button onclick="green_on()">On</button></td>
+                <td><button onclick="blue_on()">On</button></td>
+            </tr>
+            <tr colspan="3">
+                <td><button onclick="red_off()">Off</button></td>
+                <td><button onclick="green_off()">Off</button></td>
+                <td><button onclick="blue_off()">Off</button></td>
+            </tr>
+        </table>
+    </body>
+</html>

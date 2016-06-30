@@ -1,12 +1,24 @@
 // Requiring dependencies
-var express = require('express'),
-    app = express();
+var config = require('./config/settings.js'),
+    express = require('express'),
+    mqtt = require('mqtt'),
+    app = express(),
+    client = mqtt.connect(config.app.mqtt_addr);
 
-// Requiring config files
-var config = require('./config/settings.js');
+// Configuring the App
+app.set('view engine', 'ejs');
+
+// Connecting to MQTT
+client.on('connect', function() {
+    console.log("Connected to MQTT...");
+});
 
 // Routes
 app.get('/', function(req, res) {
+    res.render('index');
+});
+
+app.post('/switch', function(req, res) {
     res.sendStatus(200);
 });
 
