@@ -6,15 +6,11 @@
     td { padding: 20px 30px 20px 30px; }
 
 </style>
-<script type="javascript">
-    $(document).ready(function() {
-        alert("Working...");
-    });
-</script>
 <html>
     <head>
         <title>Remote Control LED</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="views/javascript/main.js"></script>
     </head>
     <body>
         <table border="1">
@@ -24,14 +20,14 @@
                 <td class="blue">Blue</td>
             </tr>
             <tr colspan="3">
-                <td><button onclick="red_on()">On</button></td>
-                <td><button onclick="green_on()">On</button></td>
-                <td><button onclick="blue_on()">On</button></td>
+                <td><button class="listener" code="01">On</button></td>
+                <td><button class="listener" code="11">On</button></td>
+                <td><button class="listener" code="21">On</button></td>
             </tr>
             <tr colspan="3">
-                <td><button onclick="red_off()">Off</button></td>
-                <td><button onclick="green_off()">Off</button></td>
-                <td><button onclick="blue_off()">Off</button></td>
+                <td><button class="listener" code="00">Off</button></td>
+                <td><button class="listener" code="10">Off</button></td>
+                <td><button class="listener" code="20">Off</button></td>
             </tr>
         </table>
     </body>
